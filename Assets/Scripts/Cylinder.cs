@@ -4,10 +4,17 @@ public class Cylinder : MonoBehaviour
 {
     [SerializeField]
     private GameObject _cylinder;
+    [SerializeField]
+    private NumberOfObjects _numberOfObjects;
     
     void Start()
     {
-        for (int i = 0; i < 6; i++)
+        System.Random randomPlayer = new System.Random();
+        var valueXPleyer = randomPlayer.Next(-4, 4);
+        var valueZPleyer = randomPlayer.Next(-4, 4);
+        _cylinder.transform.position = new Vector3(valueXPleyer, 0.7f, valueZPleyer);
+        
+        for (int i = 0; i < 5; i++)
         {
             System.Random random = new System.Random();
             var valueX = random.Next(-4, 4);

@@ -4,6 +4,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody _rigidbody;
+
+    [SerializeField]
+    private NumberOfClicks _numberOfClicks;
     
     private Vector3 _target;
     private float _stoppingDistace = 0.1f;
@@ -35,5 +38,6 @@ public class Player : MonoBehaviour
         _isMoving = true;
         _target = target;
         _rigidbody.AddForce(_target, ForceMode.Impulse);
+        _numberOfClicks.Click++;
     }
 }

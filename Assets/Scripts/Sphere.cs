@@ -5,7 +5,7 @@ public class Sphere : MonoBehaviour
 {
     [SerializeField]
     private GameObject _sphere;
-    
+
     private Color[] _colors = { Color.red, Color.yellow, Color.green };
 
     void Start()
@@ -17,6 +17,8 @@ public class Sphere : MonoBehaviour
         objectSphere.transform.position = new Vector3(valueX, 0.7f, valueZ);
         var color = random.Next(0, 3);
         objectSphere.GetComponent<Renderer>().material.color = _colors[color];
+        
+        
     }
 
     
